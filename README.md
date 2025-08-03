@@ -30,7 +30,10 @@ How to Build and Upload
 
 Navigate to the debug folder and build the project by running:
 
+```
  make build 
+
+```
 
 Upload the compiled firmware to the Arduino:
 
