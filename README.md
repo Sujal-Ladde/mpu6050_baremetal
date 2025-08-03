@@ -15,11 +15,11 @@ This project is a bare-metal MPU6050 driver implementation for the Arduino Uno (
 
 How to Build and Upload
 
-    Run install.sh to install all required dependencies (e.g., avr-gcc and avrdude).
+Run install.sh to install all required dependencies (e.g., avr-gcc and avrdude).
 
-    Check the port to which your Arduino is connected.
+Check the port to which your Arduino is connected.
 
-    Navigate to the debug folder and open the Makefile. Update the ARDUINO_PORT variable with the correct port.
+Navigate to the debug folder and open the Makefile. Update the ARDUINO_PORT variable with the correct port.
 
 ```
 ./install.sh
