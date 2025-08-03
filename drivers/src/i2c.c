@@ -5,7 +5,7 @@ static uint8_t I2C_wait_for_flag(void) {
   uint32_t counter = 0;
   while (!(TWCR & (1 << TWINT))) {
     if (counter++ > I2C_TIMEOUT) {
-      Serial_writeString("❌ I2C Timeout Error\r\n");
+      Serial_writeString("I2C Timeout Error\r\n");
       return I2C_TIMEOUT_ERR;
     }
   }
@@ -36,7 +36,7 @@ void I2C_stop(void) {
   uint32_t counter = 0;
   while (TWCR & (1 << TWSTO)) {
     if (counter++ > I2C_TIMEOUT) {
-      Serial_writeString("❌ I2C STOP Timeout\r\n");
+      Serial_writeString("I2C STOP Timeout\r\n");
       break;
     }
   }

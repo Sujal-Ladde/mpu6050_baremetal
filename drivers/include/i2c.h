@@ -9,12 +9,15 @@
 #define F_CPU 16000000UL  // 16 MHz CPU clock
 #define I2C_FREQ 100000UL // 100 kHz I2C speed
 
+// ==========================
+// Timeout config
+// ==========================
 #define I2C_TIMEOUT 50000 
 #define I2C_OK 0
 #define I2C_TIMEOUT_ERR 1
 
 // ==========================
-// TWI Register Definitions (ATmega328P)
+// TWI Register Definitions
 // ==========================
 #define TWBR (*(volatile uint8_t *)0xB8)  // TWI Bit Rate Register
 #define TWSR (*(volatile uint8_t *)0xB9)  // TWI Status Register

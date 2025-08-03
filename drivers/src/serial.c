@@ -1,6 +1,6 @@
 #include "serial.h"
 
-// AVR UART register definitions (bare-metal, no avr/io.h)
+// AVR UART register definitions 
 #define UDR0 (*(volatile unsigned char *)0xC6)
 #define UCSR0A (*(volatile unsigned char *)0xC0)
 #define UCSR0B (*(volatile unsigned char *)0xC1)

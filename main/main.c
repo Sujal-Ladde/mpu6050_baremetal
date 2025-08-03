@@ -7,7 +7,7 @@ int main(void) {
   I2C_init(100000);  // Initialize I2C at 100kHz
   MPU6050_init();    // Initialize MPU6050
 
-  int16_t ax, ay, az, gx, gy, gz;
+  int16_t ax = 0, ay = 0, az = 0, gx = 0, gy = 0, gz = 0;
 
   while (1) {
     MPU6050_read_accel(&ax, &ay, &az);
@@ -28,5 +28,10 @@ int main(void) {
     Serial_writeString(", ");
     Serial_writeInt(gz);
     Serial_newline();
+    Serial_newline();
+    Serial_newline();
+
+    for (volatile long int i = 500000; i--;)
+      ;
   }
 }

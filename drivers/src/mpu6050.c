@@ -4,7 +4,7 @@
 
 void MPU6050_init(void) {
   if (I2C_write_register(MPU6050_ADDR, 0x6B, 0x00) != I2C_OK)
-    Serial_writeString("❌ MPU6050 Init Error (PWR_MGMT_1)\r\n");
+    Serial_writeString("MPU6050 Init Error (PWR_MGMT_1)\r\n");
 
   I2C_write_register(MPU6050_ADDR, 0x1B, 0x00); // GYRO_CONFIG ±250 dps
   I2C_write_register(MPU6050_ADDR, 0x1C, 0x00); // ACCEL_CONFIG ±2g
@@ -15,7 +15,7 @@ void MPU6050_init(void) {
 uint8_t MPU6050_read_accel(int16_t *ax, int16_t *ay, int16_t *az) {
   uint8_t buffer[6];
   if (I2C_read_registers(MPU6050_ADDR, 0x3B, buffer, 6) != I2C_OK) {
-    Serial_writeString("❌ MPU6050 Accel Read Timeout\r\n");
+    Serial_writeString("MPU6050 Accel Read Timeout\r\n");
     return I2C_TIMEOUT_ERR;
   }
 
@@ -28,7 +28,7 @@ uint8_t MPU6050_read_accel(int16_t *ax, int16_t *ay, int16_t *az) {
 uint8_t MPU6050_read_gyro(int16_t *gx, int16_t *gy, int16_t *gz) {
   uint8_t buffer[6];
   if (I2C_read_registers(MPU6050_ADDR, 0x43, buffer, 6) != I2C_OK) {
-    Serial_writeString("❌ MPU6050 Gyro Read Timeout\r\n");
+    Serial_writeString("MPU6050 Gyro Read Timeout\r\n");
     return I2C_TIMEOUT_ERR;
   }
 
